@@ -32,6 +32,7 @@ def parse_month(month):
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
     user_string = '/'.join(user_string)
+    user_string = "'" + user_string + "'"
     return user_string
 
 #REMOVE PASS AND YOUR CODE GOES HERE
