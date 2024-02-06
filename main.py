@@ -44,3 +44,4 @@ if __name__ == '__main__':
     month = str(parse_month(month))
     bad_date[0] = month
     print(parse_date(bad_date))
+    #test
