@@ -30,14 +30,7 @@ def parse_month(month):
 #REMOVE PASS AND FIX THIS FUNCTION
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
-def parse_date(user_string):
-    user_string = '/'.join(user_string)
-    #user_string = "'" + user_string + "'"
-    return user_string
-
-#REMOVE PASS AND YOUR CODE GOES HERE
-if __name__ == '__main__':
-    bad_date = input()
+def parse_date(bad_date):
     bad_date = bad_date.replace(',', ' ')
     bad_date = bad_date.split()
     month = bad_date[0]
@@ -45,5 +38,18 @@ if __name__ == '__main__':
     if len(bad_date[1]) != 2:
         bad_date[1] = '0'+ bad_date[1]
     bad_date[0] = month
+    user_string = '/'.join(bad_date)
+    return user_string
+
+#REMOVE PASS AND YOUR CODE GOES HERE
+if __name__ == '__main__':
+    bad_date = input()
+    #bad_date = bad_date.replace(',', ' ')
+    #bad_date = bad_date.split()
+    #month = bad_date[0]
+    #month = str(parse_month(month))
+    #if len(bad_date[1]) != 2:
+    #    bad_date[1] = '0'+ bad_date[1]
+    #bad_date[0] = month
     print(parse_date(bad_date))
     #test
