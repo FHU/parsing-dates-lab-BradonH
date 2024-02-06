@@ -4,29 +4,29 @@
 #YOU MAY USE THIS FUNCTION IF YOU WANT TO OR YOU MAY REMOVE IT
 def parse_month(month):
     if 'Jan' in month:
-        return 1
+        return '01'
     elif 'Feb' in month:
-        return 2
+        return '02'
     elif 'Mar' in month:
-        return 3
+        return '03'
     elif 'Apr' in month:
-        return 4
+        return '04'
     elif 'May' in month:
-        return 5
+        return '05'
     elif 'Jun' in month:
-        return 6
+        return '06'
     elif 'Jul' in month:
-        return 7
+        return '07'
     elif 'Aug' in month:
-        return 8
+        return '08'
     elif 'Sep' in month:
-        return 9
+        return '09'
     elif 'Oct' in month:
-        return 10
+        return '10'
     elif 'Nov' in month:
-        return 11
+        return '11'
     else:
-        return 12
+        return '12'
 #REMOVE PASS AND FIX THIS FUNCTION
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
@@ -42,6 +42,8 @@ if __name__ == '__main__':
     bad_date = bad_date.split()
     month = bad_date[0]
     month = str(parse_month(month))
+    if len(bad_date[1]) != 2:
+        bad_date[1] = '0'+ bad_date[1]
     bad_date[0] = month
     print(parse_date(bad_date))
     #test
