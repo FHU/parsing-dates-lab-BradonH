@@ -52,4 +52,4 @@ if __name__ == '__main__':
     #    bad_date[1] = '0'+ bad_date[1]
     #bad_date[0] = month
     print(parse_date(bad_date))
-    #test2
+    #test3
